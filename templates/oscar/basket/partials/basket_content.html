@@ -1,0 +1,10 @@
+{% extends 'oscar/basket/partials/basket_content.html' %}
+{% load i18n %}
+
+{% block formactions %}
+<div class="form-actions">
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'paypal-redirect' %}"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" align="left" style="margin-right:7px;"></a>
+    {% endif %}
+</div>
+{% endblock %}
